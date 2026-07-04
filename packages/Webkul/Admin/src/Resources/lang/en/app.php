@@ -3789,7 +3789,7 @@ return [
             'delete-success' => 'User deleted successfully.',
             'delete-warning' => 'Are you sure, you want to perform this action?',
             'incorrect-password' => 'Incorrect password',
-            'last-delete-error' => 'Atleast one admin is required.',
+            'last-delete-error' => 'At least one admin is required.',
             'login-error' => 'Please check your credentials and try again.',
             'update-success' => 'User updated successfully.',
         ],
@@ -5393,7 +5393,7 @@ return [
 
                 'dropdown' => [
                     'searchable' => [
-                        'atleast-two-chars' => 'Type atleast 2 characters...',
+                        'atleast-two-chars' => 'Type at least 2 characters...',
                         'no-results' => 'No result found...',
                     ],
                 ],
