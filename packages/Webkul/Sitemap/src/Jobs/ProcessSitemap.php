@@ -12,6 +12,7 @@ use Illuminate\Support\Facades\URL as URLFacade;
 use Spatie\Sitemap\Sitemap;
 use Spatie\Sitemap\SitemapIndex;
 use Spatie\Sitemap\Tags\Url;
+use Webkul\Core\Contracts\Channel;
 use Webkul\Sitemap\Contracts\Sitemap as SitemapContract;
 use Webkul\Sitemap\Models\Category;
 use Webkul\Sitemap\Models\Page;
@@ -88,7 +89,7 @@ class ProcessSitemap implements ShouldQueue
     /**
      * Process a single channel and return its generated file references.
      *
-     * @param  \Webkul\Core\Contracts\Channel  $channel
+     * @param  Channel  $channel
      * @return array
      */
     protected function processChannel($channel)
@@ -119,7 +120,7 @@ class ProcessSitemap implements ShouldQueue
 
         return [
             'hostname' => $baseUrl,
-            'index'    => $this->generateSitemapIndex($channel, $baseUrl),
+            'index' => $this->generateSitemapIndex($channel, $baseUrl),
             'sitemaps' => $this->generatedSitemaps,
         ];
     }
@@ -127,7 +128,7 @@ class ProcessSitemap implements ShouldQueue
     /**
      * Process categories under the channel's root category subtree.
      *
-     * @param  \Webkul\Core\Contracts\Channel  $channel
+     * @param  Channel  $channel
      * @return void
      */
     protected function processCategories($channel)
@@ -146,7 +147,7 @@ class ProcessSitemap implements ShouldQueue
     /**
      * Buffer items and flush when the per-file URL cap is reached.
      *
-     * @param  \Webkul\Core\Contracts\Channel  $channel
+     * @param  Channel  $channel
      * @param  mixed  $items
      * @return void
      */
@@ -164,7 +165,7 @@ class ProcessSitemap implements ShouldQueue
     /**
      * Generate a sub-sitemap file for the given channel.
      *
-     * @param  \Webkul\Core\Contracts\Channel  $channel
+     * @param  Channel  $channel
      * @return void
      */
     protected function generateSitemap($channel)
@@ -189,7 +190,7 @@ class ProcessSitemap implements ShouldQueue
     /**
      * Generate the sitemap index for the given channel.
      *
-     * @param  \Webkul\Core\Contracts\Channel  $channel
+     * @param  Channel  $channel
      * @param  string  $baseUrl
      * @return string
      */
@@ -215,7 +216,7 @@ class ProcessSitemap implements ShouldQueue
      * so channel isolation on disk is guaranteed regardless of what the user enters
      * in the sitemap path field.
      *
-     * @param  \Webkul\Core\Contracts\Channel  $channel
+     * @param  Channel  $channel
      * @param  int|null  $batch
      * @return string
      */
@@ -237,7 +238,7 @@ class ProcessSitemap implements ShouldQueue
     /**
      * Normalize a channel hostname into a fully-qualified base URL.
      *
-     * @param  \Webkul\Core\Contracts\Channel  $channel
+     * @param  Channel  $channel
      * @return string
      */
     protected function channelBaseUrl($channel)
