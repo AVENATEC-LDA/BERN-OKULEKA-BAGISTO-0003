@@ -8,6 +8,8 @@ This changelog consists of the bug & security fixes and new features being inclu
 
 - Added a "remove item" affordance to the storefront quantity selector: on the cart and mini-cart, when a line item's quantity reaches the minimum (1) the minus icon is replaced with a trash icon that removes the item. Enabled via an opt-in `removable` prop on the `quantity-changer` component (default off), so add-to-cart quantity selectors on product, bundle, grouped, booking, and wishlist pages keep their existing behavior.
 
+- Fixed the installer's `.env` parser (`EnvironmentManager::getEnvVariable()`) truncating environment values that contain an `=` (e.g. `DB_PASSWORD="examplePassword="`), which caused database authentication failures during `php artisan bagisto:install` even though the same `.env` worked with standard Laravel commands. Values are now split on the first `=` only; the parser also preserves spaces inside quoted values and matches keys exactly instead of by substring.
+
 ## **v2.4.7 (24th of June 2026)** - *Release*
 
 - Security fixes.
