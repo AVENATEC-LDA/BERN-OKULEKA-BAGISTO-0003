@@ -84,11 +84,17 @@
                             <p>@{{ record.path }}</p>
 
                             <!-- URL -->
-                            <p>
-                                <a :href="record.url" target="_blank">
-                                    @{{ record.url}}
+                            <div class="flex flex-col gap-1">
+                                <a
+                                    v-for="url in (Array.isArray(record.url) ? record.url : [record.url])"
+                                    :key="url"
+                                    :href="url"
+                                    target="_blank"
+                                    class="text-blue-600 hover:underline dark:text-blue-300"
+                                >
+                                    @{{ url }}
                                 </a>
-                            </p>
+                            </div>
 
                             <!-- Actions -->
                             <div class="flex justify-end">
@@ -176,7 +182,7 @@
 
                                 <x-admin::form.control-group.error control-name="file_name" />
 
-                                <p class="mt-2 text-xs font-medium text-gray-600 dark:text-gray-300 ltr:ml-1 rtl:mr-1">
+                                <p class="mt-2 text-xs font-medium text-gray-600 ltr:ml-1 rtl:mr-1 dark:text-gray-300">
                                     @lang('admin::app.marketing.search-seo.sitemaps.index.create.file-name-info')
                                 </p>
 
@@ -199,7 +205,7 @@
 
                                 <x-admin::form.control-group.error control-name="path" />
 
-                                <p class="mt-2 text-xs font-medium text-gray-600 dark:text-gray-300 ltr:ml-1 rtl:mr-1">
+                                <p class="mt-2 text-xs font-medium text-gray-600 ltr:ml-1 rtl:mr-1 dark:text-gray-300">
                                     @lang('admin::app.marketing.search-seo.sitemaps.index.create.path-info')
                                 </p>
                             </x-admin::form.control-group>
