@@ -43,7 +43,7 @@ echo "[build-install] Generating application key..."
 php artisan key:generate --force --no-interaction
 
 echo "[build-install] Running Bagisto installation..."
-php artisan bagisto:install --skip-env-check --skip-admin-creation --skip-github-star --no-interaction
+php artisan bagisto:install --skip-env-check --skip-admin-creation --skip-github-star
 
 echo "[build-install] Running database seeders..."
 php artisan db:seed --class="Webkul\\Installer\\Database\\Seeders\\ProductTableSeeder"
