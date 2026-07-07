@@ -1,8 +1,4 @@
 {
-  "/var/www/html/bagisto/local/2-4-x-dev/packages/Webkul/Admin/node_modules/flatpickr/dist/themes/dark.css": {
-    "file": "assets/dark-CLxH30By.css",
-    "src": "/var/www/html/bagisto/local/2-4-x-dev/packages/Webkul/Admin/node_modules/flatpickr/dist/themes/dark.css"
-  },
   "node_modules/vue-cal/dist/drag-and-drop.es.js": {
     "file": "assets/drag-and-drop.es-CbCm7IHa.js",
     "name": "drag-and-drop.es",
@@ -477,7 +473,7 @@
     "src": "src/Resources/assets/images/unpaid-invoices.svg"
   },
   "src/Resources/assets/js/app.js": {
-    "file": "assets/app-C-ZbVVD9.js",
+    "file": "assets/app-CAu7CSvV.js",
     "name": "app",
     "src": "src/Resources/assets/js/app.js",
     "isEntry": true,
@@ -529,9 +525,6 @@
     ],
     "css": [
       "assets/app-CaTJYsX9.css"
-    ],
-    "assets": [
-      "assets/dark-CLxH30By.css"
     ]
   },
   "src/Resources/assets/js/chart.js": {
