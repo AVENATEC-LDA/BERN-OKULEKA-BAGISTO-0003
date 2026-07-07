@@ -16,6 +16,8 @@ class SitemapRepository extends Repository
     }
 
     /**
+     * Create a new sitemap instance in storage.
+     *
      * @return Sitemap
      */
     public function create(array $data)
@@ -28,6 +30,8 @@ class SitemapRepository extends Repository
     }
 
     /**
+     * Update the specified sitemap instance in storage.
+     *
      * @param  int  $id
      * @return Sitemap
      */

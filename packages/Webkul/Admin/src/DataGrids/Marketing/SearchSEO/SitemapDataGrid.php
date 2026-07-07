@@ -21,8 +21,8 @@ class SitemapDataGrid extends DataGrid
                 'sitemaps.file_name',
                 'sitemaps.path'
             )
-            ->addSelect(DB::raw('GROUP_CONCAT(DISTINCT channels.code) as channel'))
-            ->addSelect(DB::raw("GROUP_CONCAT(DISTINCT CONCAT(channels.id, '::', channels.code, '::', channels.hostname) SEPARATOR '||') as channel_hostnames"))
+            ->addSelect(DB::raw('GROUP_CONCAT(DISTINCT '.DB::getTablePrefix().'channels.code) as channel'))
+            ->addSelect(DB::raw('GROUP_CONCAT(DISTINCT CONCAT('.DB::getTablePrefix().'channels.id, "::", '.DB::getTablePrefix().'channels.code, "::", '.DB::getTablePrefix().'channels.hostname) SEPARATOR "||") as channel_hostnames'))
             ->leftJoin('sitemap_channels', 'sitemaps.id', '=', 'sitemap_channels.sitemap_id')
             ->leftJoin('channels', 'sitemap_channels.channel_id', '=', 'channels.id')
             ->groupBy('sitemaps.id', 'sitemaps.file_name', 'sitemaps.path');
