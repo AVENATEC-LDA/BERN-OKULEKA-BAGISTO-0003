@@ -112,29 +112,29 @@ RUN cp .env.example .env \
 #
 # The MySQL data directory (/var/lib/mysql) is baked into this layer.
 # ---------------------------------------------------------------------------
-COPY shared/mysql-init.sql /docker-entrypoint-initdb.d/init.sql
-COPY shared/build-install.sh /tmp/build-install.sh
+COPY docker/production/shared/mysql-init.sql /docker-entrypoint-initdb.d/init.sql
+COPY docker/production/shared/build-install.sh /tmp/build-install.sh
 RUN chmod +x /tmp/build-install.sh && bash /tmp/build-install.sh && rm /tmp/build-install.sh
 
 
 # ---------------------------------------------------------------------------
 # PHP configuration
 # ---------------------------------------------------------------------------
-COPY shared/php.ini /etc/php/${PHP_VERSION}/fpm/conf.d/99-production.ini
-COPY nginx/config/php-fpm.conf /etc/php/${PHP_VERSION}/fpm/pool.d/www.conf
+COPY docker/production/shared/php.ini /etc/php/${PHP_VERSION}/fpm/conf.d/99-production.ini
+COPY docker/production/nginx/config/php-fpm.conf /etc/php/${PHP_VERSION}/fpm/pool.d/www.conf
 
 
 # ---------------------------------------------------------------------------
 # Nginx configuration
 # ---------------------------------------------------------------------------
 RUN rm -f /etc/nginx/sites-enabled/default /etc/nginx/conf.d/default.conf
-COPY nginx/config/nginx.conf /etc/nginx/conf.d/bagisto.conf
+COPY docker/production/nginx/config/nginx.conf /etc/nginx/conf.d/bagisto.conf
 
 
 # ---------------------------------------------------------------------------
 # Supervisor configuration
 # ---------------------------------------------------------------------------
-COPY nginx/config/supervisord.conf /etc/supervisor/conf.d/bagisto.conf
+COPY docker/production/nginx/config/supervisord.conf /etc/supervisor/conf.d/bagisto.conf
 
 
 # ---------------------------------------------------------------------------
@@ -154,7 +154,7 @@ RUN chown -R www-data:www-data /var/www/bagisto \
 # ---------------------------------------------------------------------------
 # Entrypoint
 # ---------------------------------------------------------------------------
-COPY shared/entrypoint.sh /usr/local/bin/entrypoint.sh
+COPY docker/production/shared/entrypoint.sh /usr/local/bin/entrypoint.sh
 RUN chmod +x /usr/local/bin/entrypoint.sh
 
 
