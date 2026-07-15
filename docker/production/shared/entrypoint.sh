@@ -87,9 +87,6 @@ if ! use_internal_mysql; then
         fi
         sleep 1
     done
-
-    log "Running database migrations on external DB..."
-    php artisan migrate --force --no-interaction
 fi
 
 log "Starting services via Supervisor..."

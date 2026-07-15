@@ -50,15 +50,27 @@ class DatabaseManager
                 return false;
             }
 
-            $hasTable = Schema::hasTable('admins');
+            $hasAdminsTable = Schema::hasTable('admins');
 
-            if (! $hasTable) {
+            if (! $hasAdminsTable) {
                 return false;
             }
 
             $userCount = DB::table('admins')->count();
 
             if (! $userCount) {
+                return false;
+            }
+
+            $hasChannelsTable = Schema::hasTable('channels');
+
+            if (! $hasChannelsTable) {
+                return false;
+            }
+
+            $channelCount = DB::table('channels')->count();
+
+            if (! $channelCount) {
                 return false;
             }
 
