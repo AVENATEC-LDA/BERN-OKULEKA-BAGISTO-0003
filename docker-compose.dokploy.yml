@@ -3,8 +3,8 @@ version: '3.9'
 services:
   bagisto:
     build:
-      context: ./docker/production
-      dockerfile: nginx/Dockerfile
+      context: .
+      dockerfile: docker/production/nginx/Dockerfile
       args:
         BAGISTO_VERSION: ${BAGISTO_VERSION:-v2.4.7}
         PHP_VERSION: ${PHP_VERSION:-8.3}

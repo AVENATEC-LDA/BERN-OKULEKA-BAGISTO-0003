@@ -70,13 +70,13 @@ COPY --from=composer:2 /usr/bin/composer /usr/local/bin/composer
 
 
 # ---------------------------------------------------------------------------
-# Clone Bagisto + Composer install
+# Copy repository + Composer install
 # ---------------------------------------------------------------------------
 WORKDIR /var/www/bagisto
 
-RUN git clone --depth 1 --branch ${BAGISTO_VERSION} \
-        https://github.com/bagisto/bagisto.git . \
-    && composer install \
+COPY . /var/www/bagisto
+
+RUN composer install \
         --no-dev \
         --no-interaction \
         --prefer-dist \
