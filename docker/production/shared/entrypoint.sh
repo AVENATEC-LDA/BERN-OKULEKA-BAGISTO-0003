@@ -36,18 +36,31 @@ fi
 # ==========================================================================
 cd "$APP_DIR"
 
-log "Applying runtime environment overrides..."
-sed -i "s/^DB_HOST=.*/DB_HOST=${DB_HOST}/" .env
-sed -i "s/^DB_PORT=.*/DB_PORT=${DB_PORT}/" .env
-sed -i "s/^DB_DATABASE=.*/DB_DATABASE=${DB_DATABASE}/" .env
-sed -i "s/^DB_USERNAME=.*/DB_USERNAME=${DB_USERNAME}/" .env
-sed -i "s/^DB_PASSWORD=.*/DB_PASSWORD=${DB_PASSWORD}/" .env
+escape_sed_replacement() {
+    printf '%s' "$1" | sed -e 's/[&/\\#]/\\&/g'
+}
 
-[ -n "$APP_URL" ]      && sed -i "s|^APP_URL=.*|APP_URL=${APP_URL}|" .env
-[ -n "$APP_KEY" ]      && sed -i "s|^APP_KEY=.*|APP_KEY=${APP_KEY}|" .env
-[ -n "$APP_LOCALE" ]   && sed -i "s/^APP_LOCALE=.*/APP_LOCALE=${APP_LOCALE}/" .env
-[ -n "$APP_CURRENCY" ] && sed -i "s/^APP_CURRENCY=.*/APP_CURRENCY=${APP_CURRENCY}/" .env
-[ -n "$APP_TIMEZONE" ] && sed -i "s/^APP_TIMEZONE=.*/APP_TIMEZONE=${APP_TIMEZONE}/" .env
+replace_env_var() {
+    local key="$1"
+    local value="$2"
+    local escaped_value
+
+    escaped_value=$(escape_sed_replacement "$value")
+    sed -i "s#^${key}=.*#${key}=${escaped_value}#" .env
+}
+
+log "Applying runtime environment overrides..."
+replace_env_var DB_HOST "${DB_HOST}"
+replace_env_var DB_PORT "${DB_PORT}"
+replace_env_var DB_DATABASE "${DB_DATABASE}"
+replace_env_var DB_USERNAME "${DB_USERNAME}"
+replace_env_var DB_PASSWORD "${DB_PASSWORD}"
+
+[ -n "$APP_URL" ]      && replace_env_var APP_URL "${APP_URL}"
+[ -n "$APP_KEY" ]      && replace_env_var APP_KEY "${APP_KEY}"
+[ -n "$APP_LOCALE" ]   && replace_env_var APP_LOCALE "${APP_LOCALE}"
+[ -n "$APP_CURRENCY" ] && replace_env_var APP_CURRENCY "${APP_CURRENCY}"
+[ -n "$APP_TIMEZONE" ] && replace_env_var APP_TIMEZONE "${APP_TIMEZONE}"
 
 # ==========================================================================
 # Re-cache config if env vars were overridden
