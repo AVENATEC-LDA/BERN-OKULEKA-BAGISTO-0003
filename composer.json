@@ -106,7 +106,9 @@
             "Webkul\\Stripe\\": "packages/Webkul/Stripe/src",
             "Webkul\\Tax\\": "packages/Webkul/Tax/src",
             "Webkul\\Theme\\": "packages/Webkul/Theme/src",
-            "Webkul\\User\\": "packages/Webkul/User/src"
+            "Webkul\\User\\": "packages/Webkul/User/src",
+            "Webkul\\OpenGraphMeta\\": "packages/Webkul/OpenGraphMeta/src/",
+            "Avenatec\\EmisPayment\\": "packages/Avenatec/EmisPayment/src/"
         }
     },
     "autoload-dev": {

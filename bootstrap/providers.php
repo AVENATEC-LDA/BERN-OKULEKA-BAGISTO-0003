@@ -24,6 +24,7 @@ use Webkul\Inventory\Providers\InventoryServiceProvider;
 use Webkul\MagicAI\Providers\MagicAIServiceProvider;
 use Webkul\Marketing\Providers\MarketingServiceProvider;
 use Webkul\Notification\Providers\NotificationServiceProvider;
+use Webkul\OpenGraphMeta\Providers\OpenGraphMetaServiceProvider;
 use Webkul\Payment\Providers\PaymentServiceProvider;
 use Webkul\Paypal\Providers\PaypalServiceProvider;
 use Webkul\PayU\Providers\PayUServiceProvider;
@@ -75,8 +76,10 @@ return [
     MagicAIServiceProvider::class,
     MarketingServiceProvider::class,
     NotificationServiceProvider::class,
+    OpenGraphMetaServiceProvider::class,
     PayUServiceProvider::class,
     PaymentServiceProvider::class,
+    Avenatec\EmisPayment\Providers\EmisPaymentServiceProvider::class,
     PaypalServiceProvider::class,
     PhonePeServiceProvider::class,
     ProductServiceProvider::class,
