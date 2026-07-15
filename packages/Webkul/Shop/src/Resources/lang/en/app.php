@@ -574,6 +574,7 @@ return [
                         'search-text' => 'Search products here',
                         'sign-in' => 'Sign In',
                         'sign-up' => 'Sign Up',
+                        'visit-shop' => 'Visit Store',
                         'submit' => 'Submit',
                         'welcome' => 'Welcome',
                         'welcome-guest' => 'Welcome Guest',
@@ -597,6 +598,7 @@ return [
                     'search-text' => 'Search products here',
                     'sign-in' => 'Sign In',
                     'sign-up' => 'Sign Up',
+                    'visit-shop' => 'Visit Store',
                     'welcome' => 'Welcome',
                     'welcome-guest' => 'Welcome Guest',
                     'wishlist' => 'Wishlist',
@@ -609,6 +611,7 @@ return [
                 'proceed-to-checkout' => 'Open the checkout page to start placing an order for the items currently in the cart.',
                 'search-products' => 'Search the store catalog for products by keyword and open the matching results.',
                 'search-products-query' => 'The keywords or product name to search the catalog for.',
+                'shop' => 'Store',
                 'subscribe-newsletter' => 'Subscribe an email address to the store newsletter.',
                 'subscribe-newsletter-email' => 'The email address to subscribe to the newsletter.',
                 'view-cart' => 'Open the shopping cart page so the customer can review the products they have added.',
@@ -1019,8 +1022,7 @@ return [
 
     'search' => [
         'title' => 'These are results for : :query',
-        'suggest' => 'Search instead for',
-        'results' => 'Search results',
+                    'shop' => 'Store',
 
         'images' => [
             'index' => [

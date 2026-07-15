@@ -23,6 +23,13 @@
 
         {!! view_render_event('bagisto.shop.components.layouts.header.desktop.bottom.logo.after') !!}
 
+        <a
+            href="{{ route('shop.loja.index') }}"
+            class="primary-button rounded-full px-5 py-2 text-sm font-semibold"
+        >
+            @lang('shop::app.components.layouts.header.desktop.bottom.visit-shop')
+        </a>
+
         {!! view_render_event('bagisto.shop.components.layouts.header.desktop.bottom.category.before') !!}
 
         <v-desktop-category>

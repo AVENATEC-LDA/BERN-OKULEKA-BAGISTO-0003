@@ -49,6 +49,10 @@ Route::get('page/{slug}', [PageController::class, 'view'])
     ->name('shop.cms.page')
     ->middleware('cache.response');
 
+Route::get('loja', [SearchController::class, 'index'])
+    ->name('shop.loja.index')
+    ->middleware('cache.response');
+
 /**
  * Fallback route.
  */

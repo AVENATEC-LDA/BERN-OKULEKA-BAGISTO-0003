@@ -35,6 +35,13 @@
                 >
             </a>
 
+            <a
+                href="{{ route('shop.loja.index') }}"
+                class="ml-3 inline-flex items-center rounded-full bg-navyBlue px-4 py-2 text-xs font-semibold uppercase tracking-[0.15em] text-white"
+            >
+                @lang('shop::app.components.layouts.header.mobile.visit-shop')
+            </a>
+
             {!! view_render_event('bagisto.shop.components.layouts.header.mobile.logo.after') !!}
         </div>
 
