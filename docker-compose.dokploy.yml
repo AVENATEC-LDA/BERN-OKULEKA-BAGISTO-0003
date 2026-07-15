@@ -1,0 +1,23 @@
+version: '3.9'
+
+services:
+  bagisto:
+    build:
+      context: ./docker/production
+      dockerfile: nginx/Dockerfile
+      args:
+        BAGISTO_VERSION: ${BAGISTO_VERSION:-v2.4.7}
+        PHP_VERSION: ${PHP_VERSION:-8.3}
+    image: bagisto-dokploy:latest
+    env_file:
+      - .env
+    ports:
+      - '80:80'
+    volumes:
+      - bagisto-mysql:/var/lib/mysql
+      - bagisto-storage:/var/www/bagisto/storage
+    restart: unless-stopped
+
+volumes:
+  bagisto-mysql:
+  bagisto-storage:
