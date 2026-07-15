@@ -40,7 +40,7 @@ This repository includes a Dokploy deployment manifest that builds the Bagisto p
 
 ## Example `docker-compose.dokploy.yml`
 
-The manifest builds from `docker/production` and exposes container port `80` while avoiding hard-coded host port conflicts.
+The manifest builds from `docker/production` and exposes container port `80` without a fixed host port mapping.
 
 ```yaml
 version: '3.9'
@@ -57,7 +57,7 @@ services:
     env_file:
       - .env
     ports:
-      - '${HOST_HTTP_PORT:-8080}:80'
+      - '80'
     volumes:
       - bagisto-mysql:/var/lib/mysql
       - bagisto-storage:/var/www/bagisto/storage
@@ -68,4 +68,4 @@ volumes:
   bagisto-storage:
 ```
 
-If the Dokploy environment already uses host port `80`, set `HOST_HTTP_PORT` to another available port such as `8080` in `./.env` or in the Dokploy app environment.
+This publishes the container's internal port `80` and lets Docker assign an available host port, preventing host-port conflicts in Dokploy.

@@ -12,7 +12,7 @@ services:
     env_file:
       - .env
     ports:
-      - '${HOST_HTTP_PORT:-8080}:80'
+      - '80'
     volumes:
       - bagisto-mysql:/var/lib/mysql
       - bagisto-storage:/var/www/bagisto/storage
