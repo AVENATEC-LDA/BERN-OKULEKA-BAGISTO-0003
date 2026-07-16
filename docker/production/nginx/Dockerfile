@@ -141,18 +141,21 @@ COPY docker/production/nginx/config/supervisord.conf /etc/supervisor/conf.d/bagi
 # Runtime directories
 # ---------------------------------------------------------------------------
 RUN mkdir -p /run/php /var/log/supervisor /var/log/bagisto \
+    && mkdir -p /var/www/bagisto/storage/app/public \
     && mkdir -p /var/www/bagisto/storage/framework/cache/data \
     && mkdir -p /var/www/bagisto/storage/framework/sessions \
+    && mkdir -p /var/www/bagisto/storage/framework/testing \
     && mkdir -p /var/www/bagisto/storage/framework/views \
-    && mkdir -p /var/www/bagisto/storage/logs
+    && mkdir -p /var/www/bagisto/storage/logs \
+    && mkdir -p /var/www/bagisto/bootstrap/cache
 
 
 # ---------------------------------------------------------------------------
 # Permissions
 # ---------------------------------------------------------------------------
 RUN chown -R www-data:www-data /var/www/bagisto \
-    && chmod -R 775 storage bootstrap/cache \
-    && find storage bootstrap/cache -type d -exec chmod g+s {} +
+    && chmod -R 775 /var/www/bagisto/storage /var/www/bagisto/bootstrap/cache \
+    && find /var/www/bagisto/storage /var/www/bagisto/bootstrap/cache -type d -exec chmod g+s {} +
 
 
 # ---------------------------------------------------------------------------
