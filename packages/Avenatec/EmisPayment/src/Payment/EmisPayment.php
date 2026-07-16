@@ -22,10 +22,13 @@ class EmisPayment extends Payment
 
     public function getAdditionalDetails(): array
     {
-        return [
+        $description = $this->getConfigData('description');
+
+        return array_filter([
             'title'       => $this->getConfigData('title'),
-            'description' => $this->getConfigData('description'),
-        ];
+            'value'       => $description,
+            'description' => $description,
+        ], fn ($value) => $value !== null && $value !== '');
     }
 
     public function getImage()

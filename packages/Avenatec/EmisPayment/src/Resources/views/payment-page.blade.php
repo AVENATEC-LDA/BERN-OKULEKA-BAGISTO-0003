@@ -221,7 +221,7 @@
                 rel="noopener"
                 class="emis-frame-fallback"
             >
-                Abrir pagamento
+                Abrir pagamento em nova aba
             </a>
         </div>
 
@@ -383,11 +383,20 @@
 
             window.addEventListener('resize', scaleFrame);
             window.addEventListener('orientationchange', scaleFrame);
+            var isMobile = window.matchMedia('(max-width: 640px), (max-height: 700px)').matches;
+
             window.addEventListener('pageshow', scaleFrame);
+
+            if (isMobile) {
+                frameFallback.classList.add('show');
+                frameFallback.textContent = 'Abrir pagamento em nova aba';
+            }
 
             frame.addEventListener('load', function () {
                 scaleFrame();
-                frameFallback.classList.remove('show');
+                if (! isMobile) {
+                    frameFallback.classList.remove('show');
+                }
             });
 
             frame.addEventListener('error', function () {

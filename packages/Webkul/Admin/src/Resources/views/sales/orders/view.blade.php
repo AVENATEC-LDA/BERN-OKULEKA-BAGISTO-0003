@@ -753,22 +753,29 @@
                                 @lang('admin::app.sales.orders.view.currency')
                             </p>
 
-                            @php $additionalDetails = \Webkul\Payment\Payment::getAdditionalDetails($order->payment->method); @endphp
+                            @php
+                                $additionalDetails = \Webkul\Payment\Payment::getAdditionalDetails($order->payment->method);
+                                $paymentDetailValue = ! empty($additionalDetails) && is_array($additionalDetails)
+                                    ? ($additionalDetails['value'] ?? $additionalDetails['description'] ?? null)
+                                    : null;
+                            @endphp
 
                             <!-- Additional details -->
-                            @if (! empty($additionalDetails))
+                            @if (! empty($additionalDetails['title']))
                                 <p 
                                     class="pt-4 font-semibold text-gray-800 dark:text-white"
                                     v-pre
                                 >
                                     {{ $additionalDetails['title'] }}
                                 </p>
+                            @endif
 
+                            @if (! empty($paymentDetailValue))
                                 <p 
                                     class="text-gray-600 dark:text-gray-300"
                                     v-pre
                                 >
-                                    {{ $additionalDetails['value'] }}
+                                    {{ $paymentDetailValue }}
                                 </p>
                             @endif
 

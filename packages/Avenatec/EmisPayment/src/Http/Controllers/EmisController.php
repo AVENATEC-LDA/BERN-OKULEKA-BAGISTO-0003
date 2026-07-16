@@ -125,8 +125,17 @@ class EmisController extends Controller
         }
 
         $frameId = $frameId ?: $this->resolveFrameId($order);
+        $frameUrl = null;
 
-        if (! $frameId) {
+        if ($frameId) {
+            $frameUrl = $this->emisPayment->buildFrameUrl((string) $frameId);
+        }
+
+        if (! $frameUrl) {
+            $frameUrl = $order->payment->additional['emis_frame_url'] ?? null;
+        }
+
+        if (! $frameUrl) {
             $this->logEmis('warning', '[EMIS][ETAPA_3] Frame token ausente para pedido EMIS.', [
                 'order_id' => $orderId,
             ]);
@@ -143,7 +152,7 @@ class EmisController extends Controller
             return redirect()->route('shop.checkout.onepage.success');
         }
 
-        $iframeSrc = $this->emisPayment->buildFrameUrl((string) $frameId);
+        $iframeSrc = $frameUrl;
         $statusUrl = route('emis_payment.status', $order->id);
         $successUrl = route('shop.checkout.onepage.success');
         $cancelUrl = route('shop.checkout.cart.index');
