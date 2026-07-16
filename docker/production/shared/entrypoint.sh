@@ -89,6 +89,15 @@ if ! use_internal_mysql; then
     done
 fi
 
+log "Ensuring Laravel storage directories exist..."
+mkdir -p "$APP_DIR/storage/framework/cache/data" \
+    "$APP_DIR/storage/framework/sessions" \
+    "$APP_DIR/storage/framework/views" \
+    "$APP_DIR/storage/logs" \
+    "$APP_DIR/bootstrap/cache"
+chown -R www-data:www-data "$APP_DIR/storage" "$APP_DIR/bootstrap/cache"
+chmod -R 775 "$APP_DIR/storage" "$APP_DIR/bootstrap/cache"
+
 log "Starting services via Supervisor..."
 
 # ==========================================================================

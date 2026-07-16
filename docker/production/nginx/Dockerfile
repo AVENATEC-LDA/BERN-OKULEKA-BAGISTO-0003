@@ -140,7 +140,11 @@ COPY docker/production/nginx/config/supervisord.conf /etc/supervisor/conf.d/bagi
 # ---------------------------------------------------------------------------
 # Runtime directories
 # ---------------------------------------------------------------------------
-RUN mkdir -p /run/php /var/log/supervisor /var/log/bagisto
+RUN mkdir -p /run/php /var/log/supervisor /var/log/bagisto \
+    && mkdir -p /var/www/bagisto/storage/framework/cache/data \
+    && mkdir -p /var/www/bagisto/storage/framework/sessions \
+    && mkdir -p /var/www/bagisto/storage/framework/views \
+    && mkdir -p /var/www/bagisto/storage/logs
 
 
 # ---------------------------------------------------------------------------
