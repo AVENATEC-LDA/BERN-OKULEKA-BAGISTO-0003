@@ -24,6 +24,7 @@ This repository includes a Dokploy deployment manifest that builds the Bagisto p
    - Be sure to set `APP_URL` to your deployed domain.
    - Keep `DB_HOST=127.0.0.1` to use the container's internal MySQL.
    - Set `APP_DEBUG=false` for production.
+   - If you need Elasticsearch search support, set `ELASTICSEARCH_HOST=http://elasticsearch:9200` or point to an external Elasticsearch endpoint.
 5. Deploy the application.
 
 ## Recommended Dokploy settings
