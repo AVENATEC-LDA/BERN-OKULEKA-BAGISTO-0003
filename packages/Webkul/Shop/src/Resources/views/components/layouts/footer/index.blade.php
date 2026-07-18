@@ -148,7 +148,10 @@
             @if (core()->getConfigData('general.content.footer.copyright_content'))
                 {!! core()->getConfigData('general.content.footer.copyright_content') !!}
             @else
-                @lang('shop::app.components.layouts.footer.footer-text', ['current_year'=> date('Y') ])
+                {!! trans('shop::app.components.layouts.footer.footer-text', [
+                    'current_year' => date('Y'),
+                    'company_link' => '<a class="text-blue-600 hover:text-blue-800 underline" href="https://avenatec.it.com" target="_blank" rel="noopener noreferrer">AVENATEC LDA</a>',
+                ]) !!}
             @endif
         </p>
 
