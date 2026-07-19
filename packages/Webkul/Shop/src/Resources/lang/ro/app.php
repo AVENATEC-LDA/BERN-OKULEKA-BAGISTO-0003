@@ -624,7 +624,7 @@ return [
                 'customer-service' => 'Serviciu clienți',
                 'email' => 'E-mail',
                 'footer-content' => 'Conținut subsol',
-                'footer-text' => '© Drepturi de autor 2010 - :current_year, :company_link (Înregistrat în India). Toate drepturile rezervate.',
+                'footer-text' => '© :current_year BERN OKULEKA LDA. Todos os direitos reservados. Criado e desenvolvido pela :company_link.',
                 'locale' => 'Limbă',
                 'newsletter-text' => 'Pregătiți-vă pentru newsletter-ul nostru distractiv!',
                 'order-return' => 'Comenzi și retururi',

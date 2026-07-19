@@ -624,7 +624,7 @@ return [
                 'customer-service' => 'ප්‍රශ්නය හා සේවය',
                 'email' => 'ඊමේල්',
                 'footer-content' => 'පිටුවේ අන්තර්ගතය',
-                'footer-text' => '© :company_link (ශ්‍රී ලංකාවේ ලියාපදිංචි) සම්පූර්ණයේ සිට 2010 - :current_year දක්වා. සියලු අභිරුචිකරුවන් සමඟ සම්පූර්ණයෙන් පහසුවෙනි.',
+                'footer-text' => '© :current_year BERN OKULEKA LDA. Todos os direitos reservados. Criado e desenvolvido pela :company_link.',
                 'locale' => 'පිටු මාධ්‍ය',
                 'newsletter-text' => 'අපේ සෙවුම් පනසලේ සම්බන්ධවන්ද බලන්න!',
                 'order-return' => 'ඇණවුම් හා ආපසු සපිරව්ව',

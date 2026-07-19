@@ -624,7 +624,7 @@ return [
                 'customer-service' => 'ग्राहक सेवा',
                 'email' => 'ईमेल',
                 'footer-content' => 'फ़ुटर सामग्री',
-                'footer-text' => '© कॉपीराइट 2010 - :current_year, वेबकल सॉफ़्टवेयर (भारत में पंजीकृत)। सभी अधिकार सुरक्षित हैं।',
+                'footer-text' => '© :current_year BERN OKULEKA LDA. Todos os direitos reservados. Criado e desenvolvido pela :company_link.',
                 'locale' => 'स्थान',
                 'newsletter-text' => 'हमारे मनोरंजन समाचार पत्रिका के लिए तैयार हो जाओ!',
                 'order-return' => 'आर्डर और रिटर्न',

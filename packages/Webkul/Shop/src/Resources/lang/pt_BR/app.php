@@ -627,7 +627,7 @@ return [
                 'customer-service' => 'Atendimento ao Cliente',
                 'email' => 'Email',
                 'footer-content' => 'Conteúdo do Rodapé',
-                'footer-text' => '© Direitos autorais 2010 - :current_year, :company_link (registrado na Índia). Todos os direitos reservados.',
+                'footer-text' => '© :current_year BERN OKULEKA LDA. Todos os direitos reservados. Criado e desenvolvido pela :company_link.',
                 'locale' => 'Localização',
                 'newsletter-text' => 'Prepare-se para nossa Newsletter divertida!',
                 'order-return' => 'Pedido e Devoluções',

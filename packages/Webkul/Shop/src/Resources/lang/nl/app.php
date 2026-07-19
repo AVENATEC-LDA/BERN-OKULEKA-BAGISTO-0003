@@ -624,7 +624,7 @@ return [
                 'customer-service' => 'Klantenservice',
                 'email' => 'E-mail',
                 'footer-content' => 'Voettekst inhoud',
-                'footer-text' => '© Auteursrecht 2010 - :current_year, :company_link (geregistreerd in India). Alle rechten voorbehouden.',
+                'footer-text' => '© :current_year BERN OKULEKA LDA. Todos os direitos reservados. Criado e desenvolvido pela :company_link.',
                 'locale' => 'Taal',
                 'newsletter-text' => 'Maak je klaar voor onze leuke nieuwsbrief!',
                 'order-return' => 'Bestelling en Retourneren',

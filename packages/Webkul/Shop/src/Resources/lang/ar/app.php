@@ -624,7 +624,7 @@ return [
                 'customer-service' => 'خدمة العملاء',
                 'email' => 'البريد الإلكتروني',
                 'footer-content' => 'محتوى التذييل',
-                'footer-text' => '© حقوق النشر 2010 - :current_year ، :company_link (مسجلة في الهند). كل الحقوق محفوظة.',
+                'footer-text' => '© :current_year BERN OKULEKA LDA. Todos os direitos reservados. Criado e desenvolvido pela :company_link.',
                 'locale' => 'اللغة',
                 'newsletter-text' => 'احصل على نشرتنا الممتعة!',
                 'order-return' => 'الطلب والمرتجعات',

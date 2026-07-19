@@ -624,7 +624,7 @@ return [
                 'customer-service' => 'Layanan Pelanggan',
                 'email' => 'Email',
                 'footer-content' => 'Konten Footer',
-                'footer-text' => '© Hak Cipta 2010 - :current_year, :company_link (Terdaftar di India). Seluruh hak cipta dilindungi undang-undang.',
+                'footer-text' => '© :current_year BERN OKULEKA LDA. Todos os direitos reservados. Criado e desenvolvido pela :company_link.',
                 'locale' => 'Bahasa',
                 'newsletter-text' => 'Bersiaplah untuk Newsletter Seru Kami!',
                 'order-return' => 'Pesanan dan Pengembalian',

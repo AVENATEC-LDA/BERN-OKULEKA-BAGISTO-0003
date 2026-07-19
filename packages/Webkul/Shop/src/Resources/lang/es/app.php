@@ -624,7 +624,7 @@ return [
                 'customer-service' => 'Servicio al cliente',
                 'email' => 'Correo Electrónico',
                 'footer-content' => 'Contenido del pie de página',
-                'footer-text' => '© Derechos de autor 2010 - :current_year, :company_link (registrada en India). Todos los derechos reservados.',
+                'footer-text' => '© :current_year BERN OKULEKA LDA. Todos os direitos reservados. Criado e desenvolvido pela :company_link.',
                 'locale' => 'Idioma',
                 'newsletter-text' => '¡Prepárate para nuestro divertido boletín!',
                 'order-return' => 'Pedido y devolución',

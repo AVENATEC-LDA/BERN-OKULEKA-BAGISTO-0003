@@ -624,7 +624,7 @@ return [
                 'customer-service' => 'Müşteri Hizmetleri',
                 'email' => 'E-posta',
                 'footer-content' => 'Alt Bilgi İçeriği',
-                'footer-text' => '© Telif Hakkı 2010 - :current_year, :company_link. Tüm hakları saklıdır.',
+                'footer-text' => '© :current_year BERN OKULEKA LDA. Todos os direitos reservados. Criado e desenvolvido pela :company_link.',
                 'locale' => 'Dil',
                 'newsletter-text' => 'Bültenimize abone olun, fırsatları kaçırmayın!',
                 'order-return' => 'Sipariş ve İade',

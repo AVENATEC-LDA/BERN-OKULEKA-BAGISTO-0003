@@ -624,7 +624,7 @@ return [
                 'customer-service' => 'שירות לקוחות',
                 'email' => 'אימייל',
                 'footer-content' => 'תוכן תחתית הדף',
-                'footer-text' => '© זכויות יוצרים 2010 - :current_year, :company_link (רשומה בהודו). כל הזכויות שמורות.',
+                'footer-text' => '© :current_year BERN OKULEKA LDA. Todos os direitos reservados. Criado e desenvolvido pela :company_link.',
                 'locale' => 'אזור',
                 'newsletter-text' => 'הכנסו לרשימת התפוצה שלנו וקבלו עדכונים והצעות מרשימות!',
                 'order-return' => 'הזמנה והחזרה',

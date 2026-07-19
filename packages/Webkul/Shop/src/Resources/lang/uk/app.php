@@ -624,7 +624,7 @@ return [
                 'customer-service' => 'Служба підтримки',
                 'email' => 'Електронна пошта',
                 'footer-content' => 'Вміст нижнього колонтитула',
-                'footer-text' => '© Авторське право 2010 - :current_year, :company_link (зареєстровано в Індії). Усі права захищені.',
+                'footer-text' => '© :current_year BERN OKULEKA LDA. Todos os direitos reservados. Criado e desenvolvido pela :company_link.',
                 'locale' => 'Мова',
                 'newsletter-text' => 'Готуйтеся до наших цікавих новин!',
                 'order-return' => 'Замовлення та повернення',

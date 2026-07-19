@@ -624,7 +624,7 @@ return [
                 'customer-service' => 'خدمات مشتری',
                 'email' => 'ایمیل',
                 'footer-content' => 'محتوای فوتر',
-                'footer-text' => '© حق تکثیر 2010 - :current_year ، :company_link (ثبت‌شده در هند). تمام حقوق محفوظ است.',
+                'footer-text' => '© :current_year BERN OKULEKA LDA. Todos os direitos reservados. Criado e desenvolvido pela :company_link.',
                 'locale' => 'زبان و محل',
                 'newsletter-text' => 'برای دریافت خبرنامه‌ی جذاب ما آماده شوید!',
                 'order-return' => 'سفارش و بازگشت',
