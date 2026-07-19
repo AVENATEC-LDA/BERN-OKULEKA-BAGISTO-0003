@@ -5339,7 +5339,7 @@ return [
             ],
 
             'powered-by' => [
-                'description' => 'Desenvolvido por :bagisto, um projeto de código aberto da :webkul.',
+'description' => '© :current_year BERN OKULEKA LDA. Todos os direitos reservados. Criado e desenvolvido pela :company_link.',
             ],
         ],
 
@@ -5912,3 +5912,4 @@ return [
         ],
     ],
 ];
+

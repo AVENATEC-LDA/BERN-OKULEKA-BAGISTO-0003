@@ -5339,7 +5339,7 @@ return [
             ],
 
             'powered-by' => [
-                'description' => ':webkul විසින් නිර්මාණය කරන ලද විවෘත මූලාශ්‍ර ව්‍යාපෘතියක් වන :bagisto විසින් බලගැන්වෙන ලදි.',
+'description' => '© :current_year BERN OKULEKA LDA. Todos os direitos reservados. Criado e desenvolvido pela :company_link.',
             ],
         ],
 
@@ -5912,3 +5912,4 @@ return [
         ],
     ],
 ];
+

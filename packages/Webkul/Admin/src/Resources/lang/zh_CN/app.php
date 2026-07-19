@@ -5339,7 +5339,7 @@ return [
             ],
 
             'powered-by' => [
-                'description' => '由 :bagisto 提供支持，一个由 :webkul 社区支持的项目。',
+'description' => '© :current_year BERN OKULEKA LDA. Todos os direitos reservados. Criado e desenvolvido pela :company_link.',
             ],
         ],
 
@@ -5912,3 +5912,4 @@ return [
         ],
     ],
 ];
+

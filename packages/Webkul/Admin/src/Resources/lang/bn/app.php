@@ -5339,7 +5339,7 @@ return [
             ],
 
             'powered-by' => [
-                'description' => ':bagisto দ্বারা চালিত, :webkul দ্বারা একটি ওপেন-সোর্স প্রকল্প।',
+'description' => '© :current_year BERN OKULEKA LDA. Todos os direitos reservados. Criado e desenvolvido pela :company_link.',
             ],
         ],
 
@@ -5912,3 +5912,4 @@ return [
         ],
     ],
 ];
+
