@@ -149,7 +149,10 @@
         </div>
 
         <p class="mb-4 mt-8 text-center text-xs text-zinc-500">
-            @lang('shop::app.customers.reset-password.footer', ['current_year'=> date('Y') ])
+            @lang('shop::app.customers.reset-password.footer', [
+                'current_year'=> date('Y'),
+                'company_link' => '<a class="text-blue-600 hover:text-blue-800 underline" href="https://avenatec.it.com" target="_blank" rel="noopener noreferrer">AVENATEC LDA</a>',
+            ])
         </p>
     </div>
 </x-shop::layouts>
