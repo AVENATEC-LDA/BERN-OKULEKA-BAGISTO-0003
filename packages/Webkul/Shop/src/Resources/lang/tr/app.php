@@ -1867,7 +1867,7 @@ return [
                 'reason' => 'Belirtilen gerekçe',
                 'declined_reason' => 'Ret gerekçesi',
                 'refund_notice' => 'İade gerektiği durumlarda, açıkça aksini kabul etmediğiniz sürece, iadeyi orijinal işlemde kullandığınız ödeme yöntemiyle, yukarıdaki tarihten itibaren 14 gün içinde gerçekleştiriyoruz.',
-                'footer' => 'Bu mesaj, 2011/83/AB sayılı Direktifin (Direktif (AB) 2023/2673 ile değiştirilen şekliyle) 11a maddesi uyarınca gerekli olan, kalıcı veri taşıyıcı üzerindeki onaydır. Lütfen kayıtlarınız için saklayın.',
+                'footer' => '© :current_year BERN OKULEKA LDA. Todos os direitos reservados. Criado e desenvolvido pela :company_link.',
             ],
 
             'guest_link' => [
