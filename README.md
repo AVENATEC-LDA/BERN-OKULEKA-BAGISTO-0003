@@ -60,6 +60,9 @@ Bagisto is an opensource [laravel eCommerce](https://www.bagisto.com/) framework
 
 Bagisto can help you cut down your time, cost, and workforce for building online stores or migrating from physical stores to the ever-demanding online world. Your business—whether small or huge—can benefit. The best part, it's straightforward to set it up!
 
+> **Nota de manutenção:** Para futuras mudanças no rodapé global do Shop/Admin, consulte `updat-footer-global.md`.
+
+
 ![Repo Stats](https://raw.githubusercontent.com/bagisto/temp-media/master/stats.webp)
 
 # Getting Started
