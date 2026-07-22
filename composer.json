@@ -82,6 +82,7 @@
             "Webkul\\DebugBar\\": "packages/Webkul/DebugBar/src",
             "Webkul\\EUWithdrawal\\": "packages/Webkul/EUWithdrawal/src",
             "Webkul\\FPC\\": "packages/Webkul/FPC/src",
+            "Webkul\\FleetShipping\\": "FleetShipping/src",
             "Webkul\\GDPR\\": "packages/Webkul/GDPR/src",
             "Webkul\\ImageCache\\": "packages/Webkul/ImageCache/src",
             "Webkul\\Installer\\": "packages/Webkul/Installer/src",

@@ -22,6 +22,10 @@ class Shipment extends Model implements ShipmentContract
         'updated_at',
     ];
 
+    protected $casts = [
+        'additional' => 'array',
+    ];
+
     /**
      * Get the order that belongs to the invoice.
      */

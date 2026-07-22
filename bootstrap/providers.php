@@ -17,6 +17,7 @@ use Webkul\DataTransfer\Providers\DataTransferServiceProvider;
 use Webkul\DebugBar\Providers\DebugBarServiceProvider;
 use Webkul\EUWithdrawal\Providers\EUWithdrawalServiceProvider;
 use Webkul\FPC\Providers\FPCServiceProvider;
+use Webkul\FleetShipping\Providers\FleetShippingServiceProvider;
 use Webkul\GDPR\Providers\GDPRServiceProvider;
 use Webkul\ImageCache\Providers\ImageCacheServiceProvider;
 use Webkul\Installer\Providers\InstallerServiceProvider;
@@ -69,6 +70,7 @@ return [
     DebugBarServiceProvider::class,
     EUWithdrawalServiceProvider::class,
     FPCServiceProvider::class,
+    FleetShippingServiceProvider::class,
     GDPRServiceProvider::class,
     ImageCacheServiceProvider::class,
     InstallerServiceProvider::class,
