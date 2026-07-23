@@ -3,8 +3,9 @@
 namespace Webkul\FleetShipping\Models;
 
 use Illuminate\Database\Eloquent\Model;
+use Webkul\FleetShipping\Contracts\FleetQuote as FleetQuoteContract;
 
-class FleetQuote extends Model
+class FleetQuote extends Model implements FleetQuoteContract
 {
     protected $table = 'fleet_quotes';
 

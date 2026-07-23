@@ -4,9 +4,10 @@ namespace Webkul\FleetShipping\Models;
 
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
+use Webkul\FleetShipping\Contracts\FleetOrder as FleetOrderContract;
 use Webkul\Sales\Models\OrderProxy;
 
-class FleetOrder extends Model
+class FleetOrder extends Model implements FleetOrderContract
 {
     protected $table = 'fleet_orders';
 
